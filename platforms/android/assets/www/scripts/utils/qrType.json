@@ -1,0 +1,4 @@
+var qrType = {
+    promo: 2,
+    identity: 1
+}

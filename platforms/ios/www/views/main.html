@@ -1,0 +1,61 @@
+<!--
+<div class="hero-unit">
+  <h1>'Allo, 'Allo!</h1>
+  <p>You now have</p>
+  <ul>
+      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
+  </ul>
+  <p>installed.</p>
+  <h3>Enjoy coding!</h3>
+
+
+    <a class="btn" ng-click="scanCode();">Scan Code</a>
+    <a class="btn enc" ng-click="encodeText();">Encode Text</a>
+    <a class="btn enc" ng-click="encodeEmail();">Encode Email</a>
+    <a class="btn enc" ng-click="encodePhone();">Encode Phone</a>
+    <a class="btn enc" ng-click="encodeSMS();">Encode SMS</a>
+</div>
+-->
+<div class="eventanceApp">
+    <div class="col-lg-10 alert alert-danger statusBar" ng-hide="currentLogStatus">
+        <span class="error"><span class="glyphicon glyphicon-exclamation-sign"></span> Esta trabajando sin conexión. La actividad realizada durante esta sesión se guardará hasta tener conectividad. Es posible que los datos del teléfono estén desactualizados.</span>
+    </div>
+
+    <div class="row logo">
+        <img src="img/eventancelogo.png" alt="eventance logo"/>
+    </div>
+	<div id="deviceProperties"></div>
+    <div class="Synchronize" ng-show="synchronized == false && currentLogStatus">
+        <div class="col-lg-10 alert alert-danger" ng-show="noConnectivity">
+            <span class="error">No existe conectividad. Por favor, inténtelo más tarde.</span>
+        </div>
+        <div class="col-lg-10 alert alert-warning">
+            <a href="javascript: void(0)" ng-click="goSynchronize()" style="text-decoration: none;">
+            <h4><span class="glyphicon glyphicon-refresh"><span> Synchronize</h4>
+            <span class="error">Existen códigos escaneados <span class="glyphicon glyphicon-qrcode"></span> que no han sido sincronizados con la base de datos, probablemente por falta de colectividad. Por favor pulse aquí para sincronizar ahora todos los datos.</span>
+            </a>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="appMenuBar" ng-show="currentRole.userRoleId==3">
+            <a class="btn btnScanBar"  ng-click="scanCode()"><div class="validationBarIcon"><span class="glyphicon glyphicon-qrcode"></span></div>Escanear código</a>
+            <a class="btn btnScanBar" ng-click="digitalList()"><div class="validationBarIcon"><span class="glyphicon glyphicon-list-alt"></span></div>Apuntar en lista</a>
+        </div>
+        <div class="appMenuBar" ng-show="currentRole.userRoleId==1">
+            <a class="btn btnScanBar btnFull" ng-click="manageUrl()"><div class="validationBarIcon"><span class="glyphicon glyphicon-list"></span></div>Consultar listas</a>
+        </div>
+        </br>
+    </div>
+    <!--
+    <div class="row">
+
+        <label>Guardar en local storage</label>
+        <input type="text" ng-model="myData" />
+        <button ng-click="saveLocal()" class="btn btn-info">Guardar</button>
+
+    </div>
+    <div class="row">
+
+        <span>Datos de local: <strong>{{showLocal}}</strong></span>
+    </div>-->
+</div>

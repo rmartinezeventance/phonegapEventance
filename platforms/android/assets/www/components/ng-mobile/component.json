@@ -1,0 +1,8 @@
+{
+  "name": "ng-mobile",
+  "version": "0.3.3",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jehu/ng-mobile.git"
+  }
+}

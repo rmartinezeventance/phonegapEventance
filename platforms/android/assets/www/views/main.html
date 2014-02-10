@@ -1,0 +1,61 @@
+<div class="eventanceApp">
+    <div class="row" >
+        <div class="tabMenuBar" > <!-- ng-show // permission  style="display: none" -->
+            <a class="btn"  ng-click="profileUrl()" ng-class="{deactivate: loading}"><div class="validationBarIcon"><span class="glyphicon glyphicon-user"></span></div>Perfil</a>
+            <a class="btn" ng-click="manageUrl()" ng-class="{deactivate: loading || (!currentPermissions.clubReport && !currentPermissions.publicPromotion)}"><div class="validationBarIcon"><span class="glyphicon glyphicon-list-alt"></span></div>Lista</a> <!-- !currentPermissions.publicPromotion -->
+            <a class="btn" ng-click="" ng-class="{deactivate: loading || (!currentPermissions.generateExtraText && !currentPermissions.generateExtraDrinks && !currentPermissions.generateExtraEntrance)}"><div class="validationBarIcon"><span class="glyphicon glyphicon-send"></span></div>Crear QR</a>
+        </div>
+    </div>
+
+    <div class="col-lg-10 alert alert-danger" ng-show="noConnectivityClub" style="display: none">
+        <span class="error">No existe conectividad. Para trabajar con el club seleccionado es preciso disponer de conexión.</span>
+    </div>
+    <div class="Synchronize" ng-show="synchronized == false && currentLogStatus" style="display: none">
+        <div class="col-lg-10 alert alert-danger" ng-show="noConnectivity" style="display: none">
+            <span class="error">No existe conectividad. Por favor, inténtelo más tarde.</span>
+        </div>
+        <div class="col-lg-10 alert alert-warning">
+            <a href="javascript: void(0)" ng-click="goSynchronize()" style="text-decoration: none;">
+                <h4><span class="glyphicon glyphicon-refresh"></span> Synchronize</h4>
+                <span class="error">Existen entradas o códigos escaneados <span class="glyphicon glyphicon-qrcode"></span> que no han sido sincronizados con la base de datos, probablemente por falta de colectividad. Por favor pulse aquí para sincronizar ahora todos los datos.</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="centralPanel">
+        <!--<img src="img/eventancelogo.png" alt="eventance logo"/>-->
+        <div class="clubLogoContainer" style="background-image: url('{{currentClub.clubImageUrl}}');"></div> </br> <!-- ng-click="config = !config" -->
+        <h4 class="roleStatus"><span style="text-transform:uppercase;">{{currentClub.name}}</span> {{currentClub.placeName}}</h4>
+    </div>
+	<div id="deviceProperties"></div>
+
+
+    <div class="row">
+        <div class="extraBar" ng-show="currentPermissions.totalCounter"  style="display: none">
+            <a class="btn btnPlus" ng-click="plusEntrance(-1,'Chicos')" ng-class="{deactivate: loading}"><div class="validationBarIcon"><span class="glyphicon glyphicon-plus"></span></div>CHICOS</a>
+            <a class="btn btnPlus" ng-click="plusEntrance(-2,'Chicas')" ng-class="{deactivate: loading}"><div class="validationBarIcon"><span class="glyphicon glyphicon-plus"></span></div>CHICAS</a>
+        </div>
+        <div class="appMenuBar" ng-show="currentPermissions.scanCodes || currentPermissions.digitalList" style="display: none">
+            <a class="btn btnScanBar"  ng-click="scanCode()" ng-class="{deactivate: loading}"><div class="validationBarIcon"><span class="glyphicon glyphicon-qrcode"></span></div>Escanear código</a>
+            <a class="btn btnScanBar" ng-click="digitalList()" ng-class="{deactivate: loading}"><div class="validationBarIcon"><span class="glyphicon glyphicon-list-alt"></span></div>Apuntar en lista</a>
+        </div>
+    </div>
+</div>
+
+<!--loading modal-->
+<div class="loadingModal" ng-show="loading" style="{{browser_height}} {{browser_width}}">
+    <div class="modalBackground" style="{{browser_height}} {{browser_width}}">
+        <div class="modalContent">
+            <div id="loading"></div>
+        </div>
+    </div>
+</div>
+
+<!--Config modal-->
+<div class="configModal animate-show" ng-show="config" style="{{browser_height}} {{browser_width}} display: none;"> <!-- ng-show="config"   display: none;-->
+    <div class="modalBackground">
+        <div class="modalContent">
+            <h4 class="configField">role</h4> <select ng-model="selectionClub" selected="selectionClub" ng-options="c.roleName group by c.name for c in clubs" ng-change="setCurrentClub(selectionClub)"></select>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="eventanceApp">
+    <div class="roleBar">
+        <div class="clubLogoContainer" style="background-image: url('{{currentClub.clubImageUrl}}');"></div>
+        <h4 class="roleStatus"><span style="text-transform:uppercase;">{{currentClub.name}}</span> {{currentClub.placeName}}</h4>
+        <span class="glyphicon glyphicon-home config" ng-click="goHome()"></span>
+    </div>
+    <div class="dateDisplay">{{selectedDate | date:'EEEE'}} </br>{{selectedDate | date:'dd MMM yyyy'}}</div>
+    <div class="selectedDateBar">
+        <button class="signBtn" ng-click="changeSelectedDate(false)"><span class="glyphicon glyphicon-chevron-left"></span></button>
+        <div class="refreshDisplay"><button class="btnDateUpdate" ng-click="showData()" >Consultar <span class="glyphicon glyphicon-refresh"></span></button></div>
+        <button class="signBtn" style="float: right;" ng-click="changeSelectedDate(true)"><span class="glyphicon glyphicon-chevron-right"></span></button>
+    </div>
+    <div class="manageList">
+        <div class="manageRow" ng-class="{'working': staff.workingState!='', 'finished': staff.workingState=='finished'}" ng-repeat="staff in extraStaff " >
+            <div class="people"><h5>{{staff.people}}</h5>personas</div>
+            <div class="staffName"><span class="glyphicon glyphicon-user"></span><h3>{{staff.name}}</h3></div>
+            <div class="time" ng-show="staff.workingState != ''">llegada: {{staff.arrival | date:'dd MMM - HH:mm'}} </br> Salida: {{staff.departure | date:'dd MMM - HH:mm'}}</div>
+        </div>
+        <div class="manageRow" ng-class="{'working': staff.workingState!='', 'finished': staff.workingState=='finished'}" ng-repeat="staff in staffInClub | orderBy:'name' " > <!--  'finished': staff.workingState==finished -->
+            <div class="people"><h5>{{staff.people}}</h5>personas</div>
+            <div class="staffName"><span class="glyphicon glyphicon-user"></span><h3>{{staff.name}}</h3></div>
+            <div class="time" ng-show="staff.workingState != ''">llegada: {{staff.arrival | date:'dd MMM - HH:mm'}} </br> Salida: {{staff.departure | date:'dd MMM - HH:mm'}}</div>
+        </div>
+    </div>
+</div>
+
+<!--loading modal-->
+<div class="loadingModal" ng-show="loading" style="{{browser_height}} {{browser_width}}">
+    <div class="modalBackground" style="{{browser_height}} {{browser_width}}">
+        <div class="modalContent">
+            <div id="loading"></div>
+        </div>
+    </div>
+</div>

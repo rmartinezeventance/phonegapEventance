@@ -1,0 +1,15 @@
+<div class="eventanceApp">
+    <div class="roleBar">
+        <div class="clubLogoContainer" style="background-image: url('{{currentClub.clubImageUrl}}');"></div>
+        <h4 class="roleStatus"><span style="text-transform:uppercase;">{{currentClub.name}}</span> {{currentClub.placeName}}</h4>
+        <span class="glyphicon glyphicon-home config" ng-click="goHome()"></span>
+    </div>
+    <div class="listSearchRow">
+        <span class="glyphicon glyphicon-search"></span><input type="search" ng-model="rrppName" placeholder="Busca al relaciones..." style="{{search_input_width}}" /><span class="glyphicon glyphicon-remove-sign" ng-hide="rrppName == undefined || rrppName == ''"  ng-click="rrppName = hola"></span>
+    </div>
+    <div class="staffList">
+        <div class="staffRow" ng-repeat="staff in staffList | filter:rrppName | orderBy:'name' ">
+            <div class="staffName" ng-click="validate(staff.qrKey)"><span ng-class="[staff.role]"></span><h3>{{staff.name}}</h3></div>
+        </div>
+    </div>
+</div>

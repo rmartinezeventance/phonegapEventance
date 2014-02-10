@@ -1,0 +1,419 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.148438);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+* {
+    border-radius: 0px;
+}
+.row{
+    margin: 0px;
+}
+.eventanceApp{
+    height: 100%;
+}
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.logo{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+.logo img{
+    width: 194px;
+    height: 133px;
+}
+legend{
+    background-color: rgba(0, 0, 0, 0.35);
+    color: white;
+    height: 50px;
+    padding: 10px;
+}
+.formBox{
+    margin-bottom: 90px;
+}
+.form-horizontal .form-group {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.loginIcon{
+    background-color: rgba(80,150,200,.4);
+    color: white;
+    float: left;
+    font-size: 40px;
+    height: 60px;
+    text-align: center;
+    width: 60px;
+}
+.loginForm input{
+    border: 0px;
+    border-radius: 0px;
+    height: 60px;
+    width: auto;
+}
+.inputRow {
+    padding: 0px;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 8px -1px rgba(0,0,0,.3);
+    box-shadow: 0px 5px 8px -1px rgba(0,0,0,.3);
+}
+.title-success{
+    font-size:47pt;
+}
+.title-error{
+    font-size:32pt;
+}
+.promo-success{
+    background-color: #18bc9c;
+    border:0;
+}
+.promo-error{
+    background-color: #e74c3c;
+    border:0;
+}
+.promo-text{
+    margin: 1em;
+}
+.validationRow{
+    height: 100%;
+}
+.validationRow .alert{
+    height: 100%;
+}
+.entranceRow{
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0px;
+    z-index: 1030;
+    height: auto;
+    width: 100%;
+    display: block;
+}
+.btnEntranceRow{
+    float: left;
+    width: 50%;
+}
+.btnEntrance{
+    width: 100%;
+    height: 100%;
+    padding 30px 0px 30px 0px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+.entranceIcon{
+    margin-bottom: 10px;
+}
+.entranceIcon .glyphicon{
+    font-size: 80px;
+    padding: 10px;
+}
+.entranceIn{
+    background-color: #27ad60;
+}
+.entranceOut{
+    background-color: #e74c3c;
+}
+.appMenuBar{
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0px;
+    z-index: 1030;
+    height: auto;
+    width: 100%;
+    display: block;
+    background-color: #404040;
+}
+.appMenuBar .validationBarIcon{
+    font-size: 27px;
+    color: #949494;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.2);
+}
+.appMenuBar a, .appMenuBar button{
+    font-size: 16px;
+    color: #ababab;
+}
+.appMenuBar a:active, .appMenuBar button:active { /*.appMenuBar a:hover, .appMenuBar a:active, .appMenuBar a:focus*/
+    background-color: rgba(120,200,230,.6);
+}
+.appMenuBar .btnHomeBar{
+    float: left;
+    width: 50%;
+}
+.appMenuBar .btnScanBar{
+    float: right;
+    width: 50%;
+    background-color: #5c5c5c;
+}
+.appMenuBar .btnLess{
+    float: left;
+    width: 33%;
+    background-color: rgba(0,0,0,0);
+}
+.validationMenuBar{
+    -webkit-box-shadow: 0px -4px 5px 2px rgba(0,0,0,.35);
+    box-shadow: 0px -4px 5px 2px rgba(0,0,0,.35);
+}
+.validationMenuBar .ticketsNumber{
+    float: left;
+    width: 33%;
+    background-color: #5c5c5c;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+.appMenuBar .ticketsNumber span:first-child{
+    width: 100%;
+    font-size: 45px;
+}
+.appMenuBar .btnMore{
+    float: right;
+    width: 33%;
+    background-color: rgba(0,0,0,0);
+}
+.appMenuBar .btnValidate{
+    float: left;
+    width: 50%;
+    background-color: rgba(20,200,100,0.4);
+}
+.appMenuBar .btnCancell{
+    float: left;
+    width: 50%;
+    background-color: rgba(220,10,30,0.4);
+}
+.appMenuBar .btnLogin{
+    float: right;
+    width: 50%;
+    background-color: #5c5c5c;
+}
+.appMenuBar .btnFull{
+    width: 100%;
+    float: left;
+    background-color: #404040;
+}
+.appMenuBar .btnOffline{
+    background-color: #f39c12;
+    color: white;
+}
+
+.appMenuBar .btnOffline:after {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-top: -10px;
+    margin-right: -1px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent #5c5c5c transparent transparent;
+    content: "";
+    transition: border-color 250ms;
+}
+.ticketInfo{
+    margin-bottom: 120px;
+}
+.rrppInfoRow{
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0,0,0,.6);
+    margin-bottom: 100px;
+}
+.rrppInfoRow .rrppPhoto img{
+    width: 100%;
+}
+.rrppInfoRow .rrppData h4{
+    color: white;
+    padding: 10px;
+    border-top: solid 1px rgba(255,255,255,.1);
+    border-bottom: solid 1px rgba(0,0,0,.2);
+}
+@media(min-width: 700px) {
+    .rrppInfoRow .rrppPhoto{
+        width: 50%;
+        float: left;
+    }
+    .rrppInfoRow .rrppPhoto img{
+        width: 50%;
+    }
+}
+.selectedDateBar{
+    display: block;
+    width: 100%;
+    height: 70px;
+    background-color: #5e5e5e;
+    border-bottom: solid 3px #333333;
+    color: white;
+    font-size: 20px;
+}
+.selectedDateBar button{
+    float: left;
+    height: 100%;
+    border: solid 0px black;
+    color: white;
+}
+.selectedDateBar .signBtn{
+    padding: 5px;
+    width: 15%;
+    background-color: rgba(120,200,230,.6);
+    font-size: 30px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.2);
+}
+.selectedDateBar .btnDateUpdate{
+    font-size: 19px;
+    float: none;
+    height: 40px;
+    background-color: rgba(100,250,200,0);
+    padding: 0px;
+}
+.selectedDateBar .dateDisplay{
+    text-align: center;
+    padding: 5px;
+    height: 100%;
+    width: 70%;
+    float: left;
+
+}
+.listSearchRow{
+    padding-top: 5px;
+    width: 100%;
+    height: 60px;
+    background-color: #5e5e5e;
+    border-bottom: solid 3px #333333;
+    color: white;
+}
+.listSearchRow span{
+    padding: 5px;
+    font-size: 19px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.listSearchRow .glyphicon-remove{
+    float: left;
+    padding-top: 10px;
+    font-size: 10px;
+    background-color: rgba(120,200,230,.6);
+}
+.listSearchRow  input{
+    color: white;
+    font-size: 17px;
+    background-color: rgba(0,0,0,0);
+    border: 0px;
+    border-radius: 0px;
+    height: 60px;
+    width: auto;
+    margin-right: -50px;
+}
+.manageList, .staffList{
+    margin: 0px;
+    padding: 0px;
+}
+.staffList .staffRow{
+    background-color: #ffffff;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: block;
+
+    -webkit-box-shadow: 0px 5px 8px -1px rgba(0,0,0,.3);
+    box-shadow: 0px 5px 8px -1px rgba(0,0,0,.3);
+}
+.manageList .manageRow{
+    background-color: #e74c3c;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: block;
+
+    -webkit-box-shadow: 0px 5px 8px -1px rgba(0,0,0,.3);
+    box-shadow: 0px 5px 8px -1px rgba(0,0,0,.3);
+}
+.manageList > .working{
+    background-color: #f39c12;
+}
+.manageList > .finished{
+    background-color:#27ad60;
+}
+.manageRow .staffName, .staffRow .staffName{
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+.manageRow .staffName h3, .manageRow .staffName span, .staffRow .staffName h3, .staffRow .staffName span{
+    color: rgb(50,50,50);
+    font-size: 19px;
+    //font-weight:bold;
+}
+.working .staffName h3, .working .staffName span{
+        color: #ffffff;
+}
+.manageRow .staffName span, .staffRow .staffName span{
+    float: left;
+    font-size: 20px;
+    margin-right: 5px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.2);
+}
+.manageRow .time{
+    border-top: solid 1px rgba(255,255,255,.3);
+    padding-top: 8px;
+    color: rgb(200,220,210);
+    width: 70%;
+}
+.out .time{
+    background-color: rgba(0,0,0,.1);
+    padding-left: 10px;
+}
+.manageRow .people{
+    position: absolute;
+    right: 20px;
+    margin-top: -15px;
+}
+.manageRow .people h5{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.working .people{
+    margin-top: 0px;
+}
+.working .people h5{
+    font-size: 35px;
+    margin-bottom: 5px;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 40px;
+}
+.statusBar{
+    margin-bottom: -15px;
+    z-index: 400;
+}
+
+/*LOADING MODAL*/
+.loadingModal{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.loadingModal .modalBackground{
+    background-color: rgba(0,0,0,.4);
+}
+.loadingModal .modalContent {
+    z-index: 500;
+    position: absolute;
+    background-color: rgba(200,200,200,0);
+    top: 40%;
+    width: 100%;
+}

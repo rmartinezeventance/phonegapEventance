@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/src/android/LibraryProject/LibraryProject.iml" filepath="$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/src/android/LibraryProject/LibraryProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platforms/android/android.iml" filepath="$PROJECT_DIR$/platforms/android/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/src/com.phonegap.plugins.barcodescanner.iml" filepath="$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/src/com.phonegap.plugins.barcodescanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/org.apache.cordova.core.device/src/org.apache.cordova.core.device.iml" filepath="$PROJECT_DIR$/plugins/org.apache.cordova.core.device/src/org.apache.cordova.core.device.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/org.apache.cordova.core.geolocation/src/org.apache.cordova.core.geolocation.iml" filepath="$PROJECT_DIR$/plugins/org.apache.cordova.core.geolocation/src/org.apache.cordova.core.geolocation.iml" />
+    </modules>
+  </component>
+</project>
+

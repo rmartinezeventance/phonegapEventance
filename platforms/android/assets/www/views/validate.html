@@ -1,0 +1,74 @@
+<div class="validationRow ticketInfo" style="{{browser_height}}" ng-hide="ticket.type==qrType.identity" ng-cloak>
+    <div ng-show="success" class="alert alert-success" style="{{browser_height}}"  ng-cloak>
+        <h1 ng-show="ticket.type == qrType.promo && sourceReading == 'qr'" class="title-success"><strong><i class="icon-ok-sign"></i> VÁLIDO </strong></h1>
+        <div class="row promo-text">
+            <div class="row">
+                <h3 ng-show="sourceReading == 'qr'">El ticket corresponde a: {{ticket.person.name}} {{ticket.person.surname}}</h3>
+                <h3 ng-show="sourceReading == 'list'">De parte de: {{ticket.person.name}} {{ticket.person.surname}}</h3>
+            </div>
+            <div class="row">
+                <h1>{{ticket.text}}</h1>
+            </div>
+            <br />
+        </div>
+    </div>
+    <div ng-show="error" class="alert alert-danger" style="{{browser_height}}">
+        <h1 class="title-error"><i class="icon-remove-sign"></i><strong> NO VÁLIDO</strong></h1>
+        <div class="row">
+           <!--<h2><strong>Fuera de horario</strong></h2>-->
+        </div>
+    </div>
+    <div class="row" >
+        <div class="appMenuBar validationMenuBar" ng-show="!validated"> <!-- Validator -->
+            <button class="btn btnLess" ng-click="ticketsNumber.less()"><div class="validationBarIcon"><span class="glyphicon glyphicon-minus"></span></div>menos</button>
+            <div class="ticketsNumber"><span>{{ticketsNumber.number}}</span><span></br>personas</span></div>
+            <button class="btn btnMore" ng-click="ticketsNumber.more()"><div class="validationBarIcon"><span class="glyphicon glyphicon-plus"></span></div>mas</button>
+            <a class="btn btnCancell" href="#/home"><div class="validationBarIcon"><span class="glyphicon glyphicon-remove"></span></div>cancelar</a>
+            <button class="btn btnValidate" ng-click="promo()"><div class="validationBarIcon"><span class="glyphicon glyphicon-ok"></span></div>ok</button>
+        </div>
+
+        <div class="appMenuBar" ng-show="validated"> <!-- Menu -->
+            <a class="btn btnHomeBar" href="#/home"><div class="validationBarIcon"><span class="glyphicon glyphicon-phone"></span></div>volver</a>
+            <a class="btn btnScanBar" ng-click="scanCode()"><div class="validationBarIcon"><span class="glyphicon glyphicon-qrcode"></span></div>escanear otro</a>
+        </div>
+    </div>
+</div>
+
+<div class="identity validationRow"  ng-show="ticket.type==qrType.identity" ng-cloak>
+    <div class="row validationRow" ng-show="!ticked"  ng-cloak>
+        <div class="row rrppInfoRow">
+            <div class="rrppPhoto"><img src="img/careto.jpg" alt="careto"/></div>
+            <div class="rrppData">
+                <h4 class="rrppName">{{ticket.person.name}} {{ticket.person.surname}}</h4>
+                <h4 class="rrppSubData">Relaciones Publicas de {{ticket.club.name}}</h4>
+            </div>
+        </div>
+        <div class="entranceRow">
+            <div class="btnEntranceRow">
+                <button class=" btn btnEntrance entranceIn" ng-click="enter()"><div class="entranceIcon"><span class="glyphicon glyphicon-log-in"></span></div>entrando</button>
+            </div>
+            <div class="btnEntranceRow">
+                <button class="btn btnEntrance entranceOut" ng-click="leave()"><div class="entranceIcon"><span class="glyphicon glyphicon-log-out"></span></div>saliendo</button>
+            </div>
+        </div>
+    </div>
+	<div class="row validationRow" ng-show="ticked">
+		<div class="alert alert-success" style="{{browser_height}}">
+	        <h1 class="title-success"><strong>
+				<i class="icon-ok-sign"></i> VÁLIDO </strong></h1>
+
+	        <div class="row promo-text">
+	            <div class="row">
+	                <h1>{{ticket.text}}</h1>
+	            </div>
+	            <br />
+	        </div>
+	    </div>
+	    <div class="row">
+	        <div class="appMenuBar">
+	            <a class="btn btnHomeBar" href="#/home"><div class="validationBarIcon"><span class="glyphicon glyphicon-phone"></span></div>volver</a>
+	            <a class="btn btnScanBar" ng-click="scanCode()"><div class="validationBarIcon"><span class="glyphicon glyphicon-qrcode"></span></div>escanear otro</a>
+	        </div>
+	    </div>
+	</div>
+</div>

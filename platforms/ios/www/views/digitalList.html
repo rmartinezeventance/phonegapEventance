@@ -1,0 +1,13 @@
+<div class="eventanceApp">
+    <div class="col-lg-10 alert alert-danger statusBar" ng-hide="currentLogStatus">
+        <span class="error"><span class="glyphicon glyphicon-exclamation-sign"></span> Esta trabajando sin conexión.</span>
+    </div>
+    <div class="listSearchRow">
+        <span class="glyphicon glyphicon-search"></span><input type="search" ng-model="rrppName" placeholder="Busca al relaciones..." style="{{search_input_width}}" /><span class="glyphicon glyphicon-remove-sign" ng-hide="rrppName == undefined || rrppName == ''"  ng-click="rrppName = hola"></span>
+    </div>
+    <div class="staffList">
+        <div class="staffRow" ng-repeat="staff in staffList | filter:rrppName | orderBy:'name' ">
+            <div class="staffName" ng-click="validate(staff.qrKey)"><span class="glyphicon glyphicon-user"></span><h3>{{staff.name}}</h3></div>
+        </div>
+    </div>
+</div>
